@@ -1,0 +1,12 @@
+[submodule "services/user-service"]
+	path = services/user-service
+	url = https://github.com/xiulga/user-service.git
+[submodule "services/api-gateway"]
+	path = services/api-gateway
+	url = https://github.com/xiulga/api-gateway.git
+[submodule "services/card-service"]
+	path = services/card-service
+	url = https://github.com/xiulga/card-service.git
+[submodule "services/telegram-bot"]
+	path = services/telegram-bot
+	url = https://github.com/xiulga/telegram-bot.git
