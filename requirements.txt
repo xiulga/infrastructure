@@ -1,0 +1,26 @@
+# gRPC
+grpcio==1.67.1
+grpcio-tools==1.67.1
+
+# FastAPI и HTTP Gateway
+fastapi==0.115.0
+uvicorn==0.32.0
+
+# OpenTelemetry (трассировка, метрики, экспорт в Prometheus/Jaeger)
+opentelemetry-api==1.27.0
+opentelemetry-sdk==1.27.0
+opentelemetry-exporter-prometheus
+opentelemetry-exporter-otlp
+opentelemetry-instrumentation-grpc==0.48b0
+opentelemetry-instrumentation-fastapi==0.48b0
+opentelemetry-instrumentation-logging==0.48b0
+
+# БД
+sqlalchemy==2.0.34
+asyncpg==0.29.0  # PostgreSQL async driver
+
+# Telegram Bot
+python-telegram-bot==21.6
+
+# Прочие утилиты
+pydantic==2.8.2

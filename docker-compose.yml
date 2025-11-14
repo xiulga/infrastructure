@@ -1,0 +1,51 @@
+version: "3.9"
+
+services:
+  api-gateway:
+    build: ./services/api-gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - user-service
+      - telegram-bot
+    environment:
+      - USER_SERVICE_HOST=user-service:50051
+      - TELEGRAM_BOT_URL=http://telegram-bot:8000
+    networks:
+      - backend
+
+  user-service:
+    build: ./services/user-service
+    ports:
+      - "50051:50051"
+    networks:
+      - backend
+
+  telegram-bot:
+    build: ./services/telegram-bot
+    ports:
+      - "8000:8000"
+    depends_on:
+      - api-gateway
+    networks:
+      - backend
+
+  prometheus:
+    image: prom/prometheus
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+    networks:
+      - backend
+
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "3000:3000"
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge

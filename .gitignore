@@ -1,0 +1,66 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pdb
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.manifest
+*.spec
+
+# --- Virtual environment ---
+venv/
+env/
+ENV/
+.venv/
+
+# --- PyCharm / IntelliJ IDEA ---
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# --- MacOS system files ---
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# --- Logs & local configs ---
+*.log
+logs/
+*.pid
+*.seed
+*.bak
+*.swp
+*.swo
+*.tmp
+
+# --- Environment files ---
+.env
+.env.*
+*.local
+
+# --- Docker ---
+**/data/
+**/tmp/
+**/cache/
+docker-compose.override.yml
+
+# --- Other tools ---
+.mypy_cache/
+pytest_cache/
+coverage/
+htmlcov/
+.tox/
+.cache/
